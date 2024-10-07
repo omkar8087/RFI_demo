@@ -1,0 +1,160 @@
+{
+  "project_info": {
+    "project_number": "160958976011",
+    "project_id": "cqra-d480e",
+    "storage_bucket": "cqra-d480e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160958976011:android:220965ae355b968aed370e",
+        "android_client_info": {
+          "package_name": "com.ob.rfi.RFIDemoService.devtest.debug"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAosyQUDv6QVTVxCknzl1fXGsiyj3JHMLM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160958976011:android:b784ff0694dd3ff1ed370e",
+        "android_client_info": {
+          "package_name": "com.ob.rfi.YZPSafety.devtest.debug"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAosyQUDv6QVTVxCknzl1fXGsiyj3JHMLM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160958976011:android:3794863bdd2ba1f4ed370e",
+        "android_client_info": {
+          "package_name": "com.ob.rfi.marinaBay.devtest.debug"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAosyQUDv6QVTVxCknzl1fXGsiyj3JHMLM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160958976011:android:014cc8b12b756dc9ed370e",
+        "android_client_info": {
+          "package_name": "com.ob.rfi.parkastra.devtest.debug"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAosyQUDv6QVTVxCknzl1fXGsiyj3JHMLM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "client": [
+    {
+      "client_info":
+      {
+        "mobilesdk_app_id": "1:160958976011:android:fef2d2f6c1bd86a4ed370e",
+        "android_client_info":
+        {
+          "package_name": "com.ob.rfi.ABISFeedPlantSira.devtest.debug"
+        }
+      },
+      "oauth_client": [],
+      "api_key":
+      [
+        {
+          "current_key": "AIzaSyAosyQUDv6QVTVxCknzl1fXGsiyj3JHMLM"
+        }
+      ],
+      "services":
+      {
+        "appinvite_service":
+        {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160958976011:android:b5c78317a11419f1ed370e",
+        "android_client_info": {
+          "package_name": "com.ob.rfi.MangalamLifePark.devtest.debug"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAosyQUDv6QVTVxCknzl1fXGsiyj3JHMLM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160958976011:android:220965ae355b968aed370e",
+        "android_client_info": {
+          "package_name": "com.ob.rfi.RFIDemoService.devtest.debug"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAosyQUDv6QVTVxCknzl1fXGsiyj3JHMLM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

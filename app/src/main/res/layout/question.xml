@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:orientation="vertical"
+	android:layout_height="fill_parent" android:background="@android:color/transparent"
+	android:padding="4dp" android:layout_marginTop="4dp"
+	android:layout_gravity="bottom" android:id="@+id/questionLayout">
+
+	<TextView android:id="@+id/roomTypeText" 
+		style="@style/CustomTextStyle"
+		android:textSize="13dp"
+		android:scrollbars="vertical" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_gravity="left"
+		android:layout_marginLeft="5dp" android:singleLine="true" />
+
+	<ScrollView android:layout_weight="7.7"
+		android:layout_margin="7dp" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" >
+
+		<TextView android:id="@+id/questiontext" android:textSize="16dp"
+			android:textColor="#FFFFFF" android:textStyle="bold"
+			android:scrollbars="vertical" android:layout_width="fill_parent"
+			android:layout_height="fill_parent" />
+
+	</ScrollView>
+
+	<ScrollView android:orientation="vertical" android:id="@+id/ParentLayout"
+		android:layout_width="fill_parent" android:layout_gravity="center_horizontal"
+		android:layout_height="fill_parent" android:gravity="center"
+		android:layout_marginRight="10dp" android:layout_marginLeft="10dp"
+		android:layout_weight="4.5" android:scrollX="0px" android:scrollY="0px" 
+		android:fadeScrollbars="false">
+
+	</ScrollView>
+
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent" android:gravity="bottom"
+		android:layout_height="fill_parent" android:layout_weight="7">
+
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:gravity="center_horizontal">
+
+			<Button android:id="@+id/capture" android:text=" Capture Image(0/2) "
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				style="@style/CustomButtonStyle" />
+
+			<!--<Button android:id="@+id/setDirection" android:text="Direction"	-->
+			<!-- android:layout_width="fill_parent"	android:layout_height="wrap_content"-->
+			<!-- android:layout_weight="2" />-->
+
+		</LinearLayout>
+
+
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+
+			<Button android:id="@+id/forwards" android:text="Save"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:layout_weight="2" style="@style/CustomButtonStyle" />
+			
+			
+			<Button android:id="@+id/backward" android:text="Cancel"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:layout_weight="2" style="@style/CustomButtonStyle" />
+
+			
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>
+

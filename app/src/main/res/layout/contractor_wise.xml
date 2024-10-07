@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    
+   
+    >
+  
+    <TextView  android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Representing Wise"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_margin="10dp"/>
+    
+     <TextView 
+        android:id="@+id/sub_headng_id"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="name"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:textSize="15sp"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        />
+   <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="2"
+        android:fadeScrollbars="true" > 
+     <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+     
+    <LinearLayout
+        android:id="@+id/mainparent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left" >
+
+            </LinearLayout>
+
+            <ScrollView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+               android:layout_height="match_parent"
+                android:fadeScrollbars="true" >
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/mainchild"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    
+    
+    </HorizontalScrollView>
+    
+    
+  
+</LinearLayout>

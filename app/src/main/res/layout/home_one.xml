@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="bottom"
+    android:layout_marginTop="4dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="4dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/CustomTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home" >
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="6"
+        android:gravity="center"
+         android:visibility="gone"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/allocate_task"
+            style="@style/CustomButtonStyle"
+            android:layout_width="192dp"
+            
+            android:layout_height="wrap_content"
+            android:text="Allocate Data" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="6"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/start_ins"
+            style="@style/CustomButtonStyle"
+            android:layout_width="192dp"
+             android:visibility="invisible"
+            android:layout_height="wrap_content"
+            android:text="@string/start_audit" />
+    </LinearLayout>
+
+    <!--
+    <LinearLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:layout_weight="6"
+		android:gravity="center" android:orientation="vertical">
+
+		<Button android:id="@+id/start_dpr" android:layout_width="192dp"
+			android:layout_height="wrap_content" android:text="@string/dpr_name"
+			style="@style/CustomButtonStyle" />
+	</LinearLayout>
+    -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="6"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/updaterfi"
+            style="@style/CustomButtonStyle"
+            android:layout_width="192dp"
+            android:visibility="invisible"
+            android:layout_height="wrap_content"
+            android:text="@string/mockup_btn" />
+    </LinearLayout>
+
+    <!--
+    <LinearLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:layout_weight="6"
+		android:gravity="center" android:orientation="vertical">
+	
+	<Button android:id="@+id/test" android:layout_width="192dp"
+			android:layout_height="wrap_content" android:text="@string/test_btn"
+			style="@style/CustomButtonStyle" />
+	</LinearLayout>
+    -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="6"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/check_rfi"
+            style="@style/CustomButtonStyle"
+            android:layout_width="192dp"
+            android:layout_height="wrap_content"
+            android:text="@string/allo_btn_txt" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="6"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/test_rfi"
+            style="@style/CustomButtonStyle"
+            android:layout_width="192dp"
+            android:layout_height="wrap_content"
+            android:text="DashBoard" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="6"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/log_out"
+            style="@style/CustomButtonStyle"
+            android:layout_width="192dp"
+            android:layout_height="wrap_content"
+            android:text="@string/log_out" />
+    </LinearLayout>
+
+</LinearLayout>

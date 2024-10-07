@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="bottom"
+    android:layout_marginTop="4dp"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:padding="4dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/CustomTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Approve RFI" >
+        </TextView>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:focusableInTouchMode="false" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="7"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal"  >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:text="RFI"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" >
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/rfi_id"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2"
+                    >
+                </Spinner>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="7"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:text="Client"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" >
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/rfi_client_id"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2" >
+                </Spinner>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="7"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:text="Project"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" >
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/rfi_project_id"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2" >
+                </Spinner>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="7"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:text="Work Type"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" >
+                </TextView>
+
+
+
+                <Spinner
+                    android:id="@+id/check_worktype_id"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2" >
+                </Spinner>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="7"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:text="Structure"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" >
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/rfi_structure_id"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2" >
+                </Spinner>
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="7"
+                android:orientation="horizontal" >
+
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:text="Stage"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" >
+
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/rfi_statge_id"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2" >
+                </Spinner>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="7"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:text="Unit"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" >
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/rfi_unit_id"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2" >
+                </Spinner>
+                <com.multispinner.MultiSelectSpinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="2"
+                    android:visibility="gone"
+                    android:id="@+id/rfi_unit_id_multi"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="7"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:text="Sub-Unit"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" >
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/rfi_sub_unit_id"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2" >
+                </Spinner>
+                <com.multispinner.MultiSelectSpinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="2"
+                    android:visibility="gone"
+                    android:id="@+id/rfi_sub_unit_id_multi"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="7"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:text="Element"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    >
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/rfi_element_id"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2" >
+                </Spinner>
+                <com.multispinner.MultiSelectSpinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="2"
+                    android:visibility="gone"
+                    android:id="@+id/rfi_element_id_multi"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="7"
+                android:orientation="horizontal"
+                android:visibility="gone">>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:text="Sub-Element"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" >
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/rfi_sub_element_id"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2" >
+                </Spinner>
+
+                <com.multispinner.MultiSelectSpinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="2"
+                    android:visibility="gone"
+                    android:id="@+id/rfi_sub_element_id_multi"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="7"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:text="CheckList"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" >
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/rfi_checklist_id"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2" >
+                </Spinner>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="7"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:text="Group"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" >
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/rfi_group_id"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2" >
+                </Spinner>
+
+                <com.multispinner.MultiSelectSpinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_weight="2"
+                    android:visibility="gone"
+                    android:id="@+id/rfi_group_id_multi"
+                    />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="7"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:text="Coverage"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold">
+                </TextView>
+
+
+
+                <EditText
+                    android:id="@+id/coverage_id"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:enabled="false"
+                    android:textColor="@android:color/white"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2" >
+                </EditText>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="7"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="4"
+
+                    android:gravity="center_vertical"
+                    android:text="Drawing No."
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold">
+                </TextView>
+
+
+
+                <EditText
+                    android:id="@+id/drawing_edit_id"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:enabled="false"
+                    android:textColor="@android:color/white"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2" >
+                </EditText>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="7"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="4"
+                    android:gravity="center_vertical"
+                    android:text="Approve Status"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold">
+                </TextView>
+
+                <RadioGroup
+                    android:id="@+id/radioGroupAprStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonApprove"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/White"
+                        android:buttonTint="@color/White"
+                        android:text="Approve"
+                        android:textColor="@color/White" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonDisapprove"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/White"
+                        android:buttonTint="@color/White"
+                        android:text="Not Approve"
+                        android:textColor="@color/White" />
+                </RadioGroup>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="7"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="4"
+
+                    android:gravity="center_vertical"
+                    android:text="Comment"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold">
+                </TextView>
+
+<!--                <EditText-->
+<!--                    android:id="@+id/comments_edit_text"-->
+<!--                    android:layout_width="315dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginRight="20dp"-->
+<!--                    android:layout_weight="2"-->
+<!--                    android:background="@android:drawable/editbox_background_normal"-->
+<!--                    android:gravity="top"-->
+<!--                    android:inputType="textMultiLine"-->
+<!--                    android:lines="4"-->
+<!--                    android:maxLines="4"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textFontWeight="2"-->
+<!--                    android:textCursorDrawable="@color/black"/>-->
+
+                <EditText
+                    android:id="@+id/comments_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:gravity="top"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:maxLength ="2000"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@color/black"
+                    android:textFontWeight="2" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="1dp"
+                android:layout_weight="7"
+                android:gravity="bottom"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/cancel_rfi_button"
+                    style="@style/CustomButtonStyle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Cancel RFI"
+                    android:paddingBottom="5dp"
+                    android:layout_gravity="center"
+                    >
+                </Button>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="2dp"
+                android:layout_weight="7"
+                android:gravity="bottom" >
+
+                <Button
+                    android:id="@+id/question_select_submit"
+                    style="@style/CustomButtonStyle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Ok" >
+                </Button>
+
+                <Button
+                    android:id="@+id/question_select_Back"
+                    style="@style/CustomButtonStyle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Back" >
+                </Button>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

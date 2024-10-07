@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="7.1"
+        android:orientation="horizontal" 
+        android:paddingTop="5px"
+        android:paddingBottom="5px">
+
+        <ImageView
+            android:id="@+id/custom_dialog_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dip" 
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/customTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="10dip"
+            android:text="Alert Dialog"
+            android:textSize="16dp"
+            android:textStyle="bold" 
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@drawable/custom_dialog_line" >
+    </View>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="2"
+        android:orientation="vertical" 
+        android:paddingTop="5px"
+        android:paddingBottom="5px">
+
+        <ImageView
+            android:id="@+id/custom_dialog_image"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dip"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/customMessageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:textSize="16dp"
+            android:textStyle="bold" 
+            android:visibility="gone"/>
+
+        <EditText
+            android:id="@+id/passwordTextInput"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Sample Edit Text"
+            android:maxLength="15"
+            android:password="true"
+            android:singleLine="true"
+            android:visibility="gone" >
+        </EditText>
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="@drawable/custom_dialog_line" >
+    </View>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="7.7"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <Button
+            android:id="@+id/customButton1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Button 1"
+            android:textSize="16dip"
+            android:textStyle="bold" 
+            android:visibility="gone">
+        </Button>
+
+        <Button
+            android:id="@+id/customButton2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Button2"
+            android:textSize="16dip"
+            android:textStyle="bold"
+            android:visibility="gone" >
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

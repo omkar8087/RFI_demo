@@ -1,0 +1,1524 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+id "com.google.gms.google-services" version "4.4.0" apply false
+  apply plugin: 'kotlin-android'
+  apply plugin: 'kotlin-android-extensions'
+
+
+
+android {
+    compileSdk 29
+    defaultConfig {
+        applicationId "com.ob.rfi"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        debug {
+            applicationIdSuffix ".debug"
+        }
+    }
+
+    lintOptions {
+        // Turns off checks for the issue IDs you specify.
+        disable("TypographyFractions")
+        disable("TypographyQuotes")
+        // Turns on checks for the issue IDs you specify. These checks are in
+        // addition to the default lint checks.
+        enable("RtlHardcoded")
+        enable("RtlCompat")
+        enable("RtlEnabled")
+        // To enable checks for only a subset of issue IDs and ignore all others,
+        // list the issue IDs with the 'check' property instead. This property overrides
+        // any issue IDs you enable or disable using the properties above.
+        checkOnly("NewApi", "InlinedApi")
+        // If set to true, turns off analysis progress reporting by lint.
+        quiet = true
+        // if set to true (default), stops the build if errors are found.
+        abortOnError = false
+        // if true, only report errors.
+        ignoreWarnings = true
+    }
+
+
+    flavorDimensions "project"
+    productFlavors {
+        ShriramGrandOne {
+            dimension "project"
+            versionNameSuffix ".dev1"
+            resValue "string", "app_name", "ShriramGrandOne"
+            applicationId = "com.ob.rfi.shriramgrandone.devtest"
+
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/ShriramGrandOneService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/ShriramGrandOneService/RFIService.asmx"
+            ]
+        }
+        YashwinHinjwadi {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "YashwinService"
+            applicationId = "com.ob.rfi.yashwinh.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/YashwinService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/YashwinService/RFIService.asmx"
+            ]
+        }
+        YashOneHinjawadi {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "YashOneHinjawadiService"
+            applicationId = "com.ob.rfi.yashOneHinjawadi.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/YashOneHinjawadiService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/YashOneHinjawadiService/RFIService.asmx"
+            ]
+        }
+
+
+        YashOneInfinitee {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "YashoneInfiniteeService"
+            applicationId = "com.ob.rfi.yashoneInfinitee.devtest"
+            //resValue "string", "app_name", "RFIDemo"
+            //applicationId="com.ob.rfi.YashoneInfinitee.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/YashoneInfiniteeService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/YashoneInfiniteeService/RFIService.asmx"
+            ]
+        }
+
+        YashOneWakadCentral {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "YashOneWakadCentralService"
+            applicationId = "com.ob.rfi.yashOneWakadCentral.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/YashOneWakadCentralService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/YashOneWakadCentralService/RFIService.asmx"
+            ]
+        }
+
+        YashwinEnocre {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "YashwinEncoreService"
+            applicationId = "com.ob.rfi.yashwinEncore.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/YashwinEncoreService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/YashwinEncoreService/RFIService.asmx"
+            ]
+        }
+
+        YashwinOrizzonte {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "YashwinOrizzonteService"
+            applicationId = "com.ob.rfi.yashwinOrizzonte.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/YashwinOrizzonteService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/YashwinOrizzonteService/RFIService.asmx"
+            ]
+        }
+
+        YashwinSukhniwas {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "YashwinSukhniwasService"
+            applicationId = "com.ob.rfi.yashwinSukhniwas.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/YashwinSukhniwasService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/YashwinSukhniwasService/RFIService.asmx"
+            ]
+        }
+
+        PalladioP2 {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "PalladioP2Service"
+            applicationId = "com.ob.rfi.palladioP2.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/PalladioP2Service"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/PalladioP2Service/RFIService.asmx"
+            ]
+        }
+
+        Vantage21 {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "Vantage21Service"
+            applicationId = "com.ob.rfi.vantage21.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/Vantage21Service"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/Vantage21Service/RFIService.asmx"
+            ]
+        }
+
+        Skyland {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "SkylandService"
+            applicationId = "com.ob.rfi.skyland.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/SkylandService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/SkylandService/RFIService.asmx"
+            ]
+        }
+
+        Parkland {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "ParklandService"
+            applicationId = "com.ob.rfi.parkland.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/ParklandService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/ParklandService/RFIService.asmx"
+            ]
+        }
+
+        ParadiseOne {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "ParadiseOneService"
+            applicationId = "com.ob.rfi.paradiseOne.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/ParadiseOneService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/ParadiseOneService/RFIService.asmx"
+            ]
+        }
+
+        MelangeResidencesPhase3 {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "MelangeResidencesPhase3Service"
+            applicationId = "com.ob.rfi.melangeResidencesPhase3.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/MelangeResidencesPhase3Service"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/MelangeResidencesPhase3Service/RFIService.asmx"
+            ]
+        }
+
+        FusionTowerPhase1 {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "FusionTowerPhase1Service"
+            applicationId = "com.ob.rfi.fusionTowerPhase1.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/FusionTowerPhase1Service"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/FusionTowerPhase1Service/RFIService.asmx"
+            ]
+        }
+
+        KhambatakiGhatNH04 {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "KhambatakiGhatNH04Service"
+            applicationId = "com.ob.rfi.khambatakiGhatNH04.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/KhambatakiGhatNH04Service"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/KhambatakiGhatNH04Service/RFIService.asmx"
+            ]
+        }
+
+        CoherenceHouse {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "CoherenceHouseService"
+            applicationId = "com.ob.rfi.coherenceHouse.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/CoherenceHouseService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/CoherenceHouseService/RFIService.asmx"
+            ]
+        }
+
+        MyHomeAnkura {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "MyHomeAnkuraService"
+            applicationId = "com.ob.rfi.myHomeAnkura.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/MyHomeAnkuraService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/MyHomeAnkuraService/RFIService.asmx"
+            ]
+        }
+
+        MyHomeBhooja {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "MyHomeBhoojaService"
+            applicationId = "com.ob.rfi.myHomeBhooja.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/MyHomeBhoojaService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/MyHomeBhoojaService/RFIService.asmx"
+            ]
+        }
+
+        MyHomeTridasa {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "MyHomeTridasaService"
+            applicationId = "com.ob.rfi.myHomeTridasa.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/MyHomeTridasaService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/MyHomeTridasaService/RFIService.asmx"
+            ]
+        }
+
+        TridasaMarketingOffice {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "TridasaMarketingOfficeService"
+            applicationId = "com.ob.rfi.tridasaMarketingOffice.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/TridasaMarketingOfficeService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/TridasaMarketingOfficeService/RFIService.asmx"
+            ]
+        }
+
+        WAMIL {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "WAMILService"
+            applicationId = "com.ob.rfi.WAMIL.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/WAMILService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/WAMILService/RFIService.asmx"
+            ]
+        }
+
+        WelspunFlooring {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "WelspunFlooringService"
+            applicationId = "com.ob.rfi.welspunFlooring.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/WelspunFlooringService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/WelspunFlooringService/RFIService.asmx"
+            ]
+        }
+
+        WFLColony {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "WFLColonyService"
+            applicationId = "com.ob.rfi.WFLColony.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/WFLColonyService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/WFLColonyService/RFIService.asmx"
+            ]
+        }
+
+
+        SpaceStation1 {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "SpaceStation1Service"
+            applicationId = "com.ob.rfi.spaceStation1.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/SpaceStation1Service"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/SpaceStation1Service/RFIService.asmx"
+            ]
+        }
+
+        ANPGSchool {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "ANPGSchoolService"
+            applicationId = "com.ob.rfi.ANPGSchool.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/ANPGSchoolService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/ANPGSchoolService/RFIService.asmx"
+            ]
+        }
+
+        MangalamOrganics {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "MangalamOrganicsService"
+            applicationId = "com.ob.rfi.mangalamOrganics.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/MangalamOrganicsService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/MangalamOrganicsService/RFIService.asmx"
+            ]
+        }
+        Cyberthum {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "CyberthumService"
+            applicationId = "com.ob.rfi.cyberthum.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/CyberthumService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/CyberthumService/RFIService.asmx"
+            ]
+        }
+
+        MahagunManorial {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "MahagunManorialService"
+            applicationId = "com.ob.rfi.mahagunManorial.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/MahagunManorialService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/MahagunManorialService/RFIService.asmx"
+            ]
+        }
+
+        HYMA {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "HYMAService"
+            applicationId = "com.ob.rfi.HYMA.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/HYMAService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/HYMAService/RFIService.asmx"
+            ]
+        }
+
+        HYMLifeHubService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "HYMALifeHubService"
+            applicationId = "com.ob.rfi.HYMALifeHub.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/HYMALifeHubService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/HYMALifeHubService/RFIService.asmx"
+            ]
+        }
+
+        Shounak {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "ShounakService"
+            applicationId = "com.ob.rfi.shounak.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/ShounakService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/ShounakService/RFIService.asmx"
+            ]
+        }
+
+        KotibhaskarBusinessCourt {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "KBCService"
+            applicationId = "com.ob.rfi.KBC.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/KBCService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/KBCService/RFIService.asmx"
+            ]
+        }
+
+        VenkateshSkydale {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "VenkateshSkydaleService"
+            applicationId = "com.ob.rfi.venkateshSkydale.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/VenkateshSkydaleService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/VenkateshSkydaleService/RFIService.asmx"
+            ]
+        }
+
+        Sauhrud {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "SauhrudService"
+            applicationId = "com.ob.rfi.sauhrud.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/SauhrudService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/SauhrudService/RFIService.asmx"
+            ]
+        }
+
+        YashwinSupernovauhrud {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "YashwinSupernovaService"
+            applicationId = "com.ob.rfi.yashwinSupernova.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/YashwinSupernovaService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/YashwinSupernovaService/RFIService.asmx"
+            ]
+        }
+
+        EminenceService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "EminenceService"
+            applicationId = "com.ob.rfi.eminence.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/EminenceService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/EminenceService/RFIService.asmx"
+            ]
+        }
+
+        Neelaya {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "NeelayaService"
+            applicationId = "com.ob.rfi.neelaya.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/NeelayaService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/NeelayaService/RFIService.asmx"
+            ]
+        }
+
+        /*RFIDemo {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "RFIDemoService"
+            applicationId = "com.ob.rfi.RFIDemoService.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/RFIDemoService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/RFIDemoService/RFIService.asmx"
+            ]
+        }*/
+
+        RFIDemo {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "RFIDemoService"
+            applicationId = "com.ob.rfi.RFIDemoService.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/RFIDemoService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/RFIDemoService/RFIService.asmx"
+            ]
+        }
+
+        LivMo {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "LivMoService"
+            applicationId = "com.ob.rfi.LivMo.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/LivMoService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/LivMoService/RFIService.asmx"
+            ]
+        }
+
+
+        PrithviPresidio {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "PrithviPresidioService"
+            applicationId = "com.ob.rfi.prithviPresidio.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/PrithviPresidioService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/PrithviPresidioService/RFIService.asmx"
+            ]
+        }
+
+        PrithviProximus {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "PrithviProximusService"
+            applicationId = "com.ob.rfi.prithviProximus.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/PrithviProximusService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/PrithviProximusService/RFIService.asmx"
+            ]
+        }
+
+        MyHomeMeru {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "MyHomeMERUSchoolService"
+            applicationId = "com.ob.rfi.myHomeMERUSchool.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/MyHomeMERUSchoolService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/MyHomeMERUSchoolService/RFIService.asmx"
+            ]
+        }
+
+        MarinaBayService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "MarinaBayService"
+            applicationId = "com.ob.rfi.marinaBay.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/MarinaBayService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/MarinaBayService/RFIService.asmx"
+            ]
+        }
+
+        PrideAtlantaService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "PrideAtlanticService"
+            applicationId = "com.ob.rfi.prideAtlantic.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/PrideAtlanticService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/PrideAtlanticService/RFIService.asmx"
+            ]
+        }
+
+
+        AtlanticService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "AtlanticService"
+            applicationId = "com.ob.rfi.atlantic.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/AtlanticService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/AtlanticService/RFIService.asmx"
+            ]
+        }
+
+        RamaMetrolifeMaximaService {
+            dimension "project"
+            versionNameSuffix ".dev1"
+            resValue "string", "app_name", "RamaMetrolifeMaximaService"
+            applicationId = "com.ob.rfi.ramaMetrolifeMaxima.devtest"
+            //resValue "string", "app_name", "RFIDemo"
+            //applicationId="com.ob.rfi.RamaMetrolifeMaxima.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/RamaMetrolifeMaximaService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/RamaMetrolifeMaximaService/RFIService.asmx"
+            ]
+        }
+
+        FourSeasonsService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "FourSeasonsService"
+            applicationId = "com.ob.rfi.fourSeasons.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/FourSeasonsService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/FourSeasonsService/RFIService.asmx"
+            ]
+        }
+
+        FourSeasonsMumbaiResidenceService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "FourSeasonsMumbaiResidenceService"
+            applicationId = "com.ob.rfi.fourSeasonsMumbaiResidence.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/FourSeasonsMumbaiResidenceService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/FourSeasonsMumbaiResidenceService/RFIService.asmx"
+            ]
+        }
+
+        EsmeraldaService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "EsmeraldaService"
+            applicationId = "com.ob.rfi.esmeralda.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/EsmeraldaService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/EsmeraldaService/RFIService.asmx"
+            ]
+        }
+
+        SevenBusinessSquareService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "SevenBusinessSquareService"
+            applicationId = "com.ob.rfi.sevenBusinessSquare.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/7BusinessSquareService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/7BusinessSquareService/RFIService.asmx"
+            ]
+        }
+
+        AdarshGreensService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "AdarshGreensService"
+            applicationId = "com.ob.rfi.adarshGreens.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/AdarshGreensService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/AdarshGreensService/RFIService.asmx"
+            ]
+        }
+
+        DwarakaService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "DwarakaService"
+            applicationId = "com.ob.rfi.dwaraka.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/DwarakaService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/DwarakaService/RFIService.asmx"
+            ]
+        }
+
+        YashadaSupremeService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "YashadaSupremeService"
+            applicationId = "com.ob.rfi.yashadaSupreme.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/YashadaSupremeService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/YashadaSupremeService/RFIService.asmx"
+            ]
+        }
+
+        RivaliParkPhase3Service {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "RivaliParkPhase3Service"
+            applicationId = "com.ob.rfi.rivaliParkPhase3.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/RivaliParkPhase3Service"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/RivaliParkPhase3Service/RFIService.asmx"
+            ]
+        }
+        GauravIconTowerService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "GauravIconTowerService"
+            applicationId = "com.ob.rfi.gauravIconTower.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/GauravIconTowerService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/GauravIconTowerService/RFIService.asmx"
+            ]
+        }
+        YashadaSupremeFJService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "YashadaSupremeF-JService"
+            applicationId = "com.ob.rfi.yashadaSupremeFJ.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/YashadaSupremeF-JService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/YashadaSupremeF-JService/RFIService.asmx"
+            ]
+        }
+        RAMABarcodeService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "RAMABarcodeService"
+            applicationId = "com.ob.rfi.RAMABarcode.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/RAMABarcodeService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/RAMABarcodeService/RFIService.asmx"
+            ]
+        }
+        AkankshaService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "AkankshaService"
+            applicationId = "com.ob.rfi.akanksha.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/AkankshaService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/AkankshaService/RFIService.asmx"
+            ]
+        }
+        KrystalOneService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "KrystalOneService"
+            applicationId = "com.ob.rfi.krystalOne.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/KrystalOneService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/KrystalOneService/RFIService.asmx"
+            ]
+        }
+        UniqueYoutopiaService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "UniqueYoutopiaService"
+            applicationId = "com.ob.rfi.uniqueYoutopia.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/UniqueYoutopiaService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/UniqueYoutopiaService/RFIService.asmx"
+            ]
+        }
+
+        AtharvaService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "AtharvaService"
+            applicationId = "com.ob.rfi.atharva.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/AtharvaService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/AtharvaService/RFIService.asmx"
+            ]
+        }
+        RamaMetrolifeBizzbayService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "RamaMetrolifeBizzbayService"
+            applicationId = "com.ob.rfi.ramaMetrolifeBizzbay.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/RamaMetrolifeBizzbayService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/RamaMetrolifeBizzbayService/RFIService.asmx"
+            ]
+        }
+        RamaMetrolifeOptimaService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "RamaMetrolifeOptimaService"
+            applicationId = "com.ob.rfi.ramaMetrolifeOptima.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/RamaMetrolifeOptimaService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/RamaMetrolifeOptimaService/RFIService.asmx"
+            ]
+        }
+
+        MyHomeTridasaDemoService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "MyHomeTridasaDemoService"
+            applicationId = "com.ob.rfi.myHomeTridasaDemo.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/MyHomeTridasaDemoService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/MyHomeTridasaDemoService/RFIService.asmx"
+            ]
+        }
+
+        ANPAtlantisService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "ANPAtlantisService"
+            applicationId = "com.ob.rfi.ANPAtlantis.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/ANPAtlantisService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/ANPAtlantisService/RFIService.asmx"
+            ]
+        }
+        KaveriSeedsUniversityService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "KaveriSeedsUniversityService"
+            applicationId = "com.ob.rfi.kaveriSeedsUniversity.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/KaveriSeedsUniversityService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/KaveriSeedsUniversityService/RFIService.asmx"
+            ]
+        }
+        CelestialCityPhase2Service {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "CelestialCityPhase2Service"
+            applicationId = "com.ob.rfi.celestialCityPhase2.devtest"
+            // resValue "string", "app_name", "CelestialCityPhase2"
+            //applicationId="com.ob.rfi.CelestialCityPhase2.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/CelestialCityPhase2Service"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/CelestialCityPhase2Service/RFIService.asmx"
+            ]
+        }
+        KumarSanctumService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "KumarSanctumService"
+            applicationId = "com.ob.rfi.kumarSanctum.devtest"
+            //applicationId="com.ob.rfi.KumarSanctumm.devtest"
+            ext.serviceNameSpace = [
+                    debug: "http://ec2-3-140-73-127.us-east-2.compute.amazonaws.com/KumarSanctumService"
+            ]
+            ext.URL = [
+                    debug: "http://ec2-3-140-73-127.us-east-2.compute.amazonaws.com/KumarSanctumService/RFIService.asmx"
+            ]
+        }
+        KumarPebbleParkService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "KumarPebbleParkService"
+            applicationId = "com.ob.rfi.kumarPebblePark.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/KumarPebbleParkService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/KumarPebbleParkService/RFIService.asmx"
+            ]
+        }
+
+        KumarPurabService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "KumarPurabService"
+            applicationId = "com.ob.rfi.kumarPurab.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/KumarPurabService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/KumarPurabService/RFIService.asmx"
+            ]
+        }
+        DoyenAscentService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "DoyenAscentService"
+            applicationId = "com.ob.rfi.doyenAscent.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/DoyenAscentService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/DoyenAscentService/RFIService.asmx"
+            ]
+        }
+        KutumbService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "KutumbService"
+            applicationId = "com.ob.rfi.kutumb.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/KutumbService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/KutumbService/RFIService.asmx"
+            ]
+        }
+        SRARamtekdiService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "SRARamtekdiService"
+            applicationId = "com.ob.rfi.SRARamtekdi.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/SRARamtekdiService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/SRARamtekdiService/RFIService.asmx"
+            ]
+        }
+        YZPSafetyService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "YZPSafetyService"
+            applicationId = "com.ob.rfi.YZPSafety.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/YZSafety_TestService"
+            ]
+            ext.URL = [
+                    /* debug: "https://www.cqra-rfi.com/YZPSafetyService/RFIService.asmx"*/
+                    debug: "https://www.cqra-rfi.com/YZSafety_TestService/RFIService.asmx"
+            ]
+        }
+
+        RFIYZPSafety_20240228Service {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "RFIYZPSafety_20240228"
+            applicationId = "com.ob.rfi.YZPSafety.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/RFIYZPSafety_20240228Service"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/RFIYZPSafety_20240228Service/RFIService.asmx"
+            ]
+        }
+        ABISFeedPlantSiraService{
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "ABISFeedPlant-Sira"
+            applicationId = "com.ob.rfi.ABISFeedPlantSira.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/ABISFeedPlant_SiraService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/ABISFeedPlant_SiraService/RFIService.asmx"
+            ]
+        }
+
+        MangalamLifeParkService{
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "MangalamLifePark"
+            applicationId = "com.ob.rfi.MangalamLifePark.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/MangalamLifeParkService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/MangalamLifeParkService/RFIService.asmx"
+            ]
+        }
+
+        MyHomeNishadaService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "MyHomeNishadaService"
+            applicationId = "com.ob.rfi.myHomeNishada.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/MyHomeNishadaService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/MyHomeNishadaService/RFIService.asmx"
+            ]
+        }
+        PranavaGreenwichService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "PranavaGreenwichService"
+            applicationId = "com.ob.rfi.pranavaGreenwich.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/PranavaGreenwichService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/PranavaGreenwichService/RFIService.asmx"
+            ]
+        }
+        SohoService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "SOHOService"
+            applicationId = "com.ob.rfi.SOHO.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/SOHOService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/SOHOService/RFIService.asmx"
+            ]
+        }
+        RaghavaIRISService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "RaghavaIRISService"
+            applicationId = "com.ob.rfi.raghavaIRIS.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/RaghavaIRISService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/RaghavaIRISService/RFIService.asmx"
+            ]
+        }
+        KumarParthTowersService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "KumarParthTowersService"
+            applicationId = "com.ob.rfi.kumarParthTowers.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/KumarParthTowersService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/KumarParthTowersService/RFIService.asmx"
+            ]
+        }
+        AmarPristine4SafetyService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "AmarPristine4SafetyService"
+            applicationId = "com.ob.rfi.amarPristine4Safety.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/AmarPristine4SafetyService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/AmarPristine4SafetyService/RFIService.asmx"
+            ]
+        }
+        AmarPristinefourService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "AmarPristineFourService"
+            applicationId = "com.ob.rfi.amarPristinefour.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/AmarPristine4Service"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/AmarPristine4Service/RFIService.asmx"
+            ]
+        }
+        HeritageUHTBuildingService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "HeritageUHTBuildingService"
+            applicationId = "com.ob.rfi.heritageUHTBuilding.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/HeritageUHTBuildingService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/HeritageUHTBuildingService/RFIService.asmx"
+            ]
+        }
+
+        MadhubanService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "MadhubanService"
+            applicationId = "com.ob.rfi.madhuban.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/MadhubanService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/MadhubanService/RFIService.asmx"
+            ]
+        }
+        MahalaxmiHouseSolapurService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "MahalaxmiHouseSolapurService"
+            applicationId = "com.ob.rfi.mahalaxmiHouseSolapur.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/MahalaxmiHouseSolapurService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/MahalaxmiHouseSolapurService/RFIService.asmx"
+            ]
+        }
+
+        SASCrownService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "SASCrownService"
+            applicationId = "com.ob.rfi.SASCrown.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/SASCrownService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/SASCrownService/RFIService.asmx"
+            ]
+        }
+
+        ThermaxBarsanaService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "ThermaxBarsanaService"
+            applicationId = "com.ob.rfi.thermaxBarsana.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/ThermaxBarsanaService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/ThermaxBarsanaService/RFIService.asmx"
+            ]
+        }
+
+        GodrejCenterYerwadaService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "GodrejCenterYerwadaService"
+            applicationId = "com.ob.rfi.godrejCenterYerwada.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/GodrejCenterYerwadaService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/GodrejCenterYerwadaService/RFIService.asmx"
+            ]
+        }
+
+        ShriramHebbal1Service {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "ShriramHebbal1Service"
+            applicationId = "com.ob.rfi.shriramHebbal1.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/ShriramHebbal1Service"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/ShriramHebbal1Service/RFIService.asmx"
+            ]
+        }
+
+        //---------------------------------------------------
+
+        ABISEstateRajnandgaon {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "RFIABISEstateRajnandgaon"
+            applicationId = "com.ob.rfi.abisestaterajnandgaon.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://cqra-rfi.com/RFIABISEstateRajnandgaonService"
+            ]
+            ext.URL = [
+                    debug: "https://cqra-rfi.com/RFIABISEstateRajnandgaonService/RFIService.asmx"
+            ]
+        }
+
+
+        AstraHeights {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "RFIAstraHeights"
+            applicationId = "com.ob.rfi.astraheights.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://cqra-rfi.com/RFIAstraHeightsService"
+            ]
+            ext.URL = [
+                    debug: "https://cqra-rfi.com/RFIAstraHeightsService/RFIService.asmx"
+            ]
+        }
+
+        GalaxyProvisoMaplewood {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "RFIGalaxyProvisoMaplewood"
+            applicationId = "com.ob.rfi.galaxyprovisomaplewood.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://cqra-rfi.com/RFIGalaxyProvisoMaplewoodService"
+            ]
+            ext.URL = [
+                    debug: "https://cqra-rfi.com/RFIGalaxyProvisoMaplewoodService/RFIService.asmx"
+            ]
+        }
+
+        HatcheryFeedPlantOdisha {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "RFIHatcheryFeedPlantOdisha"
+            applicationId = "com.ob.rfi.hatcheryfeedplantodisha.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://cqra-rfi.com/RFIHatcheryFeedPlantOdishaService"
+            ]
+            ext.URL = [
+                    debug: "https://cqra-rfi.com/RFIHatcheryFeedPlantOdishaService/RFIService.asmx"
+            ]
+        }
+
+        LushResidences {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "RFILushResidences"
+            applicationId = "com.ob.rfi.lushresidences.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://cqra-rfi.com/RFILushResidencesService"
+            ]
+            ext.URL = [
+                    debug: "https://cqra-rfi.com/RFILushResidencesService/RFIService.asmx"
+            ]
+        }
+
+        ParkAstra {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "RFIParkAstra"
+            applicationId = "com.ob.rfi.parkastra.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://www.cqra-rfi.com/ParkAstraService"
+            ]
+            ext.URL = [
+                    debug: "https://www.cqra-rfi.com/ParkAstraService/RFIService.asmx"
+            ]
+        }
+
+        PCMCUrbanCentralARP {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "RFIPCMCUrbanCentralARP"
+            applicationId = "com.ob.rfi.pcmcuUrbanCentralARP.devtest"
+            ext.serviceNameSpace = [
+                    debug: "http://ec2-3-140-73-127.us-east-2.compute.amazonaws.com/PCMCUrbanCentralARPService"
+            ]
+            ext.URL = [
+                    debug: "http://ec2-3-140-73-127.us-east-2.compute.amazonaws.com/PCMCUrbanCentralARPService/RFIService.asmx"
+            ]
+        }
+
+
+        PoonawallaTowers {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "RFIPoonawallaTowers"
+            applicationId = "com.ob.rfi.poonawallatowers.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://cqra-rfi.com/RFIPoonawallaTowersService"
+            ]
+            ext.URL = [
+                    debug: "https://cqra-rfi.com/RFIPoonawallaTowersService/RFIService.asmx"
+            ]
+        }
+
+
+        PoultryFeedPlantPalsana {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "RFIPoultryFeedPlantPalsana"
+            applicationId = "com.ob.rfi.poultryfeedplantpalsana.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://cqra-rfi.com/RFIPoultryFeedPlant-PalsanaService"
+            ]
+            ext.URL = [
+                    debug: "https://cqra-rfi.com/RFIPoultryFeedPlant-PalsanaService/RFIService.asmx"
+            ]
+        }
+
+
+        RivaliParkPhaseThree {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "RFIRivaliParkPhaseThree"
+            applicationId = "com.ob.rfi.rivaliparkphasethree.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://cqra-rfi.com/RFIRivaliParkPhase3Service"
+            ]
+            ext.URL = [
+                    debug: "https://cqra-rfi.com/RFIRivaliParkPhase3Service/RFIService.asmx"
+            ]
+        }
+
+
+        SeaCrest {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "RFISeaCrest"
+            applicationId = "com.ob.rfi.seacrest.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://cqra-rfi.com/RFISeaCrestService"
+            ]
+            ext.URL = [
+                    debug: "https://cqra-rfi.com/RFISeaCrestService/RFIService.asmx"
+            ]
+        }
+
+
+        SoyaSolventPlantBadnawar {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "RFISoyaSolventPlantBadnawar"
+            applicationId = "com.ob.rfi.soyasolventplantbadnawar.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://cqra-rfi.com/RFISoyaSolventPlant-BadnawarService"
+            ]
+            ext.URL = [
+                    debug: "https://cqra-rfi.com/RFISoyaSolventPlant-BadnawarService/RFIService.asmx"
+            ]
+        }
+
+
+        SRAJagruti {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "RFISRAJagruti"
+            applicationId = "com.ob.rfi.srajagruti.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://cqra-rfi.com/RFISRAJagrutiService"
+            ]
+            ext.URL = [
+                    debug: "https://cqra-rfi.com/RFISRAJagrutiService/RFIService.asmx"
+            ]
+        }
+
+
+        ANPGSchoolPhaseTwo {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "RFIANPGSchoolPhaseTwo"
+            applicationId = "com.ob.rfi.anpgschoolphasetwo.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://cqra-rfi.com/RFIANPGSchoolPhase2Service"
+            ]
+            ext.URL = [
+                    debug: "https://cqra-rfi.com/RFIANPGSchoolPhase2Service/RFIService.asmx"
+            ]
+        }
+
+
+        ThermaxRBELNagpur {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "RFIANPGSchoolPhaseTwo"
+            applicationId = "com.ob.rfi.thermaxrbelnagpur.devtest"
+            ext.serviceNameSpace = [
+                    debug: "https://cqra-rfi.com/RFIThermaxRBELNagpurService"
+            ]
+            ext.URL = [
+                    debug: "https://cqra-rfi.com/RFIThermaxRBELNagpurService/RFIService.asmx"
+            ]
+        }
+
+    }
+
+
+    applicationVariants.all { variant ->
+        def flavor = variant.productFlavors[0]
+        variant.buildConfigField "String", "Service_NameSpace", "\"${flavor.serviceNameSpace[variant.buildType.name]}\""
+        variant.buildConfigField "String", "Service_URL", "\"${flavor.URL[variant.buildType.name]}\""
+
+    }
+
+    subprojects {
+        project.configurations.all {
+            resolutionStrategy.eachDependency { details ->
+                if (details.requested.group == 'com.android.support'
+                        && !details.requested.name.contains('multidex')) {
+                    details.useVersion "26.1.0"
+                }
+            }
+        }
+
+    }
+
+    namespace 'com.ob.rfi'
+
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation project(':multispinner')
+    // implementation 'com.github.pratikbutani:MultiSelectSpinner:08d324c98'
+    //implementation 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
+    testImplementation 'junit:junit:4.13.2'
+
+
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+
+    // implementation files('libs/android-support-v4.jar')
+    implementation files('libs/google-analytics-tracking-2.0.jar')
+    implementation files('libs/httpmime-4.2.jar')
+    implementation files('libs/ksoap2-android-assembly-2.6.0-jar-with-dependencies.jar')
+    implementation files('libs/picasso-2.3.3.jar')
+    implementation 'com.google.android.material:material:1.12.0'
+
+    implementation ("com.google.firebase:firebase-messaging:24.0.1")
+    // Import the Firebase BoM
+    implementation(platform("com.google.firebase:firebase-bom:32.7.1"))
+    implementation 'com.google.code.gson:gson:2.11.0'
+
+    //  implementation 'org.jetbrains.kotlin:kotlin-stdlib-jre7:1.7.10'
+
+    implementation 'androidx.core:core:1.13.1'
+    classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.0-Beta1")
+
+
+    configurations.configureEach {
+        resolutionStrategy {
+            force 'com.android.support:support-v4:28.0.2'
+        }
+    }
+    android {
+        useLibrary 'org.apache.http.legacy'
+    }
+
+
+}
+

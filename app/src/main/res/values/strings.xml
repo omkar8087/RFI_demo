@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources >    
+    <string name="hello" >Hello World!</string>
+    <string name="app_name">RFI</string>
+    <string name="dpr_name">DPR</string>
+    <string name="start_audit">Create RFI</string>
+    <string name="mockup_btn">Update RFI</string>
+    <string name="test_btn">Test</string>
+    <string name="allo_btn_txt">Check RFI</string>
+    <string name="log_out">Logout</string>
+    <color name="BLUE">#292554C7</color>
+    <color name="lightBlue">#2900BFFF</color>
+	<color name="GREEN">#29347C2C</color>
+	<color name="Blue" >#92DFF3</color>
+	<color name="Green1">#29378101</color> 
+  	<color name="Green2">#292e5d0b</color> 
+  	<color name="Green3">#228B22</color>
+  	<color name="Grey">#F0A1A1A1</color>
+  	<color name="Red">#FF0000</color>
+  	<color name="White">#FFFFFF</color>
+    <color name="Indigo">#EE82EE</color>
+
+    <color name="listHeaderInner">#290000FF</color>
+  	<color name="listHeaderBorder">#0000FF</color>
+  	<color name="listChildInner">#2932CD32</color>
+  	<color name="listChildBorder">#32CD32</color>
+  	<color name="listChildInnerRed">#29FF0000</color>
+  	<color name="listChildBorderRed">#FF0000</color>
+	<color name="background">#80938d8d</color>
+	<color name="LightGreen">#4eff00</color>
+	<string name="channel_name">RFI Image Upload</string>
+	<string name="channel_description">uploadImage</string>
+	<string name="NEWS_CHANNEL_ID">news</string>
+	<string name="CHANNEL_NEWS">News</string>
+	<string name="CHANNEL_DESCRIPTION">Get informed with new updates</string>
+    <string name="enter_remark_str">Enter Remark.....</string>
+    <string name="channel_id">rfi-channel-id</string>
+
+    <integer name="notificationId">1</integer>
+
+</resources>

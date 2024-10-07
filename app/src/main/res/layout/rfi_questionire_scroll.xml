@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/questionLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="bottom"
+    android:layout_marginTop="4dp"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:padding="4dp" >
+
+    <TextView
+        android:id="@+id/roomTypeText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="10dp"
+        android:scrollbars="vertical"
+        android:singleLine="true"
+        android:text="scrolling text"
+        android:textColor="#FFFFFF"
+        android:textSize="13dp"
+        android:textStyle="bold" />
+
+    <!--
+         <TextView android:id="@+id/roundNoText" android:textSize="13dp"
+			android:textColor="#FFFFFF" android:textStyle="bold" android:singleLine="true"
+			android:scrollbars="vertical" android:layout_width="fill_parent"
+			android:layout_height="wrap_content"  android:layout_gravity="left"
+			android:layout_marginLeft="10dp" android:layout_marginTop="2dp"/>
+    -->
+
+    <TextView
+        android:id="@+id/tradeText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:scrollbars="vertical"
+        android:singleLine="true"
+        android:text="Ques Type"
+        android:textColor="#FFFFFF"
+        android:textSize="13dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/drawing_id"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:scrollbars="vertical"
+        android:singleLine="true"
+        android:text="coverage and drawing no."
+        android:textColor="#FFFFFF"
+        android:textSize="13dp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="7dp"
+        android:layout_weight="7.7"
+        android:fadeScrollbars="false" >
+
+        <TextView
+            android:id="@+id/questiontext"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="vertical"
+            android:text="Ques Text"
+            android:textColor="#FFFFFF"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ParentLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="4.5"
+        android:orientation="vertical"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="7"
+        android:gravity="bottom"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/capture"
+                style="@style/CustomButtonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Capture Image(0/2)" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/Submit_button"
+                style="@style/CustomButtonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Submit" />
+
+            <Button
+                android:id="@+id/Back_button"
+                style="@style/CustomButtonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Back" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

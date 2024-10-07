@@ -1,0 +1,101 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/White</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:textColor">@color/NewBlack</item>
+        <item name="android:textColorHint">@color/White</item>
+        <item name="editTextStyle">@style/EditTextDefault</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
+        <!-- <item name="popupBackground">@android:color/black</item>-->
+        <!--  android:popupBackground="YOUR_HEX_COLOR_CODE"-->
+        <!--        <item name="android:progressBarStyle">@style/MyProgressBarStyle</item>-->
+        <item name="android:textViewStyle">@style/MyTextViewStyle</item>
+
+        <item name="android:actionMenuTextColor">@color/NewBlack</item>
+
+        <item name="alertDialogTheme">@style/AlertDialogColor</item>
+    </style>
+
+    <style name="AlertDialogColor" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/Red</item>
+        <item name="android:textColorPrimary">@color/Green3</item>
+        <!--        <item name=""-->
+    </style>
+
+    <style name="MyTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/Blue</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="MyProgressBarStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="colorAccent">@color/NewWhite</item>
+        <!--        <item name="android:background">@color/NewWhite</item>-->
+    </style>
+
+    <style name="EditTextDefault" parent="android:Widget.EditText">
+        <item name="android:textColor">@color/White</item>
+
+    </style>
+
+    <style name="PopupMenu" parent="@android:style/Widget.PopupMenu">
+        <item name="android:popupBackground">@android:color/black</item>
+    </style>
+
+    <style name="holoSpinner" parent="ThemeOverlay.AppCompat.Dark">
+
+        <item name="android:clickable">true</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:popupBackground">@android:color/black</item>
+        <item name="dialogTheme">@style/AppTheme.Dialog.Green</item>
+
+        <item name="alertDialogTheme">@style/AppTheme.Dialog.Alert.Green</item>
+
+    </style>
+    <!-- Green Dialog Theme -->
+
+    <style name="AppTheme.Dialog.Green" parent="Theme.AppCompat.Light.Dialog">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+
+        <item name="colorPrimaryDark">@color/Red</item>
+
+        <item name="colorAccent">@color/Green1</item>
+
+    </style>
+
+    <!-- Green Alert Dialog Theme -->
+
+    <style name="AppTheme.Dialog.Alert.Green" parent="Theme.AppCompat.Light.Dialog.Alert">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+
+        <item name="colorPrimaryDark">@color/Red</item>
+
+        <item name="colorAccent">@color/Green1</item>
+
+    </style>
+
+    <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">@color/black</item>
+        <item name="colorAccent">@color/White</item>
+        <item name="colorPrimaryDark">@color/Red</item>
+        <item name="android:textColorPrimary">@color/White</item>
+        <item name="android:textColor">@color/White</item>
+<!--        <item name="alertDialogCenterButtons">@color/Green3</item>-->
+        <item name="android:textStyle">bold</item>
+    </style>
+
+<!--    <style name="STAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog">-->
+<!--        <item name="android:colorAccent">#f3f3f3</item>-->
+<!--        <item name="android:textColor">#f3f3f3</item>-->
+<!--        <item name="android:textColorPrimary">#f3f3f3</item>-->
+<!--    </style>-->
+</resources>

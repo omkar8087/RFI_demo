@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "om.ob.rfi.amarPristine4Safety.devtest",
+  "variantName": "AmarPristine4SafetyServiceRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 1,
+      "versionName": "1.0.dev",
+      "outputFile": "app-AmarPristine4SafetyService-release.apk"
+    }
+  ],
+  "elementType": "File"
+}
