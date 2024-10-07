@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:background="@android:color/transparent"
+	android:orientation="vertical">
+	
+	<LinearLayout android:id="@+id/toolbar"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:orientation="horizontal" android:background="@android:color/white">
+
+		<ImageButton android:id="@+id/reset" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:src="@drawable/reset"
+			android:background="@android:color/transparent" android:paddingLeft="20dp" />
+
+		 <ImageButton android:id="@+id/next" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:src="@drawable/next"
+			android:background="@android:color/transparent" android:paddingLeft="20dp" />
+
+		<ImageButton android:id="@+id/marker"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:paddingLeft="20dp"
+			android:src="@drawable/marker" android:background="@drawable/image_button_selector" />
+
+		<ImageButton android:id="@+id/saveimage"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:src="@drawable/save" android:paddingLeft="20dp" 
+			android:background="@android:color/transparent" />
+		 
+			
+	</LinearLayout>
+	
+	<LinearLayout android:id="@+id/parent" android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" android:orientation="vertical">
+
+		<com.ob.zoom.ImageZoomView android:id="@+id/zoomview"
+			android:layout_width="fill_parent" android:layout_height="fill_parent" />
+			
+	</LinearLayout>
+
+</LinearLayout>

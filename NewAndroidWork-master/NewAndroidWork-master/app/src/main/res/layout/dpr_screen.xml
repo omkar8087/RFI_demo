@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+	android:id="@+id/scroll" 
+	 >
+     
+    <ScrollView 
+         android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+	 android:fillViewport="true"
+       	android:focusableInTouchMode="false"
+    >
+        
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="998dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:padding="4dp" >
+
+      
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/dpr_sr"
+                style="@style/CustomTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:text="Sr\t"
+                 >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="7"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="4"
+                android:gravity="center_vertical"
+                android:text="Project"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/dpr_select_scheme"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="2" >
+            </Spinner>
+        </LinearLayout>
+
+      
+             
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="7"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="4"
+                android:gravity="center_vertical"
+                android:text="Corridor/Structure"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/dpr_structure"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="2" >
+            </EditText>
+        </LinearLayout>
+        
+        
+         <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="7"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="4"
+                android:gravity="center_vertical"
+                android:text="Stage"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/dpr_stage"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="2" >
+            </EditText>
+        </LinearLayout>
+        
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="7"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="4"
+                android:gravity="center_vertical"
+                android:text="Location"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/dpr_location"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="2" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="7"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="4"
+                android:gravity="center_vertical"
+                android:text="Description"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/dpr_description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="2" >
+            </EditText>
+        </LinearLayout>
+
+ <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="7"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="4"
+                android:gravity="center_vertical"
+                android:text="Quantity"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/dpr_quantity"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="2" >
+            </EditText>
+        </LinearLayout>
+        
+  <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="7"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="4"
+                android:gravity="center_vertical"
+                android:text="observation"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/dpr_observation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="2" >
+            </EditText>
+        </LinearLayout>
+ 
+   <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="7"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="4"
+                android:gravity="center_vertical"
+                android:text="Remark"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/dpr_remark"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="2" >
+            </EditText>
+        </LinearLayout>
+  
+        
+        
+      
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="bottom"
+            android:layout_weight="7"
+            android:gravity="bottom" >
+
+            <Button
+                android:id="@+id/dpr_select_submit"
+                style="@style/CustomButtonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Submit" >
+            </Button>
+
+            <Button
+                android:id="@+id/dpr_select_next"
+                style="@style/CustomButtonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Next">
+            </Button>
+        </LinearLayout>
+       
+    </LinearLayout>
+</ScrollView>
+</ScrollView>

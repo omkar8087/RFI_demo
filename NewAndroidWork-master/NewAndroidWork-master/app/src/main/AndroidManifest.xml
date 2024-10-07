@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    >
+
+<!--    <uses-sdk android:targetSdkVersion="17"/>-->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
+        android:debuggable="true"
+        >
+
+    <activity android:name="com.ob.rfi.AssignCheckList"
+            android:screenOrientation="portrait" >
+
+        </activity>
+        <activity android:name="com.ob.rfi.LoginScreen" android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:clearTaskOnLaunch="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+
+
+
+        </activity>
+
+        <activity android:name="HomeScreen" android:screenOrientation="portrait" android:launchMode="singleInstance"/>
+      <!--  <activity android:name=".SelectionAssign" android:screenOrientation="portrait" />
+        <activity android:name="SampleActivity" android:screenOrientation="portrait" />-->
+        <activity android:name="SelectionScreen" android:screenOrientation="portrait" />
+        <activity android:name="Questionnaire" android:screenOrientation="portrait" />
+        <activity android:name="SelectQuestion" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" android:label="Create RFI"/>
+        <activity android:name="AllocateTask" android:screenOrientation="portrait" android:label="Allocate Data" android:launchMode="singleTop"/>
+        <!--<activity android:name="ImageDisplay" android:screenOrientation="portrait"  />-->
+      <!--  <activity android:name="ImageUpload" android:screenOrientation="portrait"/>-->
+        <activity android:name="ViewImagesActivity" android:screenOrientation="portrait"/>
+        <activity android:name="DprScreen"  android:screenOrientation="portrait"/>
+        <activity android:name="mockupScreen" android:screenOrientation="portrait"/>
+
+        <activity android:name="CheckFRI" android:screenOrientation="portrait"/>
+        <activity android:name="CheckQuestionire" android:screenOrientation="portrait"/>
+        <activity android:name="Update_Questionire" android:screenOrientation="portrait"/>
+        <activity android:name="Testing" android:screenOrientation="portrait"/>
+        <activity android:name="UpdateRfi" android:screenOrientation="portrait" android:label="Update RFI"/>
+        <activity android:name="RfiQuestionire" android:screenOrientation="portrait"/>
+
+        <activity android:name="DashBoardSelection" android:screenOrientation="portrait"/>
+        <activity android:name="TabRfiActivity" android:screenOrientation="portrait"/>
+        <activity android:name="CheckListWiseList" android:screenOrientation="portrait"/>
+        <activity android:name="MakerWiseList" android:screenOrientation="portrait"/>
+        <activity android:name="CheckerWiseList" android:screenOrientation="portrait"/>
+
+        <activity android:name="ContractorWiseList" android:screenOrientation="portrait"/>
+        <activity android:name="ApproverWise" android:screenOrientation="portrait"/>
+        <activity android:name="RfiQuestionSelect" android:screenOrientation="portrait"/>
+        <activity android:name="RfiQuestionireScroll" android:screenOrientation="portrait"/>
+        <activity android:name="UpdateRfiScroll" android:screenOrientation="portrait"/>
+        <activity android:name="UpdateQuetionireScroll" android:screenOrientation="portrait"/>
+        <activity android:name="CheckRfiScroll" android:screenOrientation="portrait"/>
+        <activity android:name="CheckQuestionireScroll" android:screenOrientation="portrait"/>
+        <activity android:name="ShowPreviousImages" android:screenOrientation="portrait"/>
+        <activity android:name="ShowPreviousImagesChecker" android:screenOrientation="portrait"/>
+        <activity android:name="CustomeImageProcessing" android:screenOrientation="portrait"/>
+        <service android:name="com.ob.rfi.UploadImages" >
+
+        </service>
+
+
+
+
+        <!-- feather activity must be defined here -->
+       <!-- <activity
+            android:name="com.aviary.android.feather.FeatherActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:largeHeap="true"
+            android:screenOrientation="unspecified"
+            android:theme="@style/FeatherDefaultTheme.Custom" />
+-->
+
+
+        <!-- Aviary Receiver must be defined here. gets the newly installed plugins -->
+       <!-- <receiver
+            android:name="com.aviary.android.feather.receivers.FeatherSystemReceiver"
+            android:exported="true"
+
+            android:process=":feather_system_receiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>-->
+
+        <!-- Required for the hi-res image processing -->
+        <!-- The "android:authorities" attribute must be unique, so please use your app's package path in this way: -->
+        <!-- 	android:authorities="{your.package.name}.HiResProvider" -->
+      <!--  <provider
+            android:name="com.aviary.android.feather.library.providers.FeatherContentProvider"
+            android:exported="false"
+            android:authorities="com.ob.rfi.HiResProvider"
+            >
+        </provider>-->
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:authorities="com.ob.rfi.fileprovider"
+            android:grantUriPermissions="true"
+            >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path"/>
+        </provider>
+
+        <uses-library android:name="org.apache.http.legacy" android:required="false" />
+
+
+
+    </application>
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+</manifest>

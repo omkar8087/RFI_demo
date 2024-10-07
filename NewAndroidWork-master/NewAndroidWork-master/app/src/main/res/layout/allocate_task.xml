@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="bottom"
+    android:layout_marginTop="4dp"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:padding="4dp" >
+
+
+ <ScrollView
+     android:layout_width="fill_parent"
+     android:layout_height="match_parent"
+     android:fillViewport="true"
+     android:focusableInTouchMode="false" >
+    
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="vertical" >
+   <!--  
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="7"
+          android:focusable="true"
+		android:focusableInTouchMode="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="4"
+            android:gravity="center_vertical"
+            android:text="RFI"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" >
+        </TextView>
+
+        <Spinner
+            android:id="@+id/rfi_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="2" >
+        </Spinner>
+    </LinearLayout>     -->
+    
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="7"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="4"
+            android:gravity="center_vertical"
+            android:text="Client"
+            android:layout_gravity="center"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" >
+        </TextView>
+
+        <Spinner
+            android:id="@+id/rfi_client_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="2" >
+        </Spinner>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="7"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="4"
+            android:gravity="center_vertical"
+            android:text="Project"
+            android:layout_gravity="center"
+
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" >
+        </TextView>
+
+        <Spinner
+            android:id="@+id/rfi_project_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="2" >
+        </Spinner>
+    </LinearLayout>
+    
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="7"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="4"
+            android:gravity="center_vertical"
+            android:text="Work Type"
+            android:layout_gravity="center"
+
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" >
+        </TextView>
+
+        <Spinner
+            android:id="@+id/rfi_worktype_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="2" >
+        </Spinner>
+    </LinearLayout>
+
+
+         <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="7"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="4"
+            android:gravity="center_vertical"
+            android:text="Structure"
+            android:layout_gravity="center"
+
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" >
+        </TextView>
+
+        <Spinner
+            android:id="@+id/rfi_structure_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="2" >
+        </Spinner>
+    </LinearLayout>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="7"
+        android:orientation="horizontal" >
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="4"
+            android:gravity="center_vertical"
+            android:text="Stage"
+            android:layout_gravity="center"
+
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" >
+
+        </TextView>
+
+        <Spinner
+            android:id="@+id/rfi_statge_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="2" >
+        </Spinner>
+    </LinearLayout>
+
+    
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="7"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="4"
+            android:gravity="center_vertical"
+            android:text="Unit"
+            android:layout_gravity="center"
+
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" >
+        </TextView>
+
+        <Spinner
+            android:id="@+id/rfi_unit_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="2" >
+        </Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="7"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="4"
+            android:gravity="center_vertical"
+            android:text="Sub-Unit"
+            android:layout_gravity="center"
+
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" >
+        </TextView>
+
+        <Spinner
+            android:id="@+id/rfi_sub_unit_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="2" >
+        </Spinner>
+    </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:layout_weight="7"
+             android:orientation="horizontal"
+             android:visibility="visible">
+
+             <TextView
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="20dp"
+                 android:layout_weight="4"
+                 android:gravity="center_vertical"
+                 android:text="Element"
+                 android:textColor="#FFFFFF"
+                 android:layout_gravity="center"
+
+                 android:textStyle="bold"></TextView>
+
+             <Spinner
+                 android:id="@+id/rfi_element_id"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center"
+                 android:layout_marginLeft="20dp"
+                 android:layout_marginRight="20dp"
+                 android:layout_weight="2"></Spinner>
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:layout_weight="7"
+             android:orientation="horizontal"
+             android:visibility="visible">
+
+             <TextView
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="20dp"
+                 android:layout_weight="4"
+                 android:gravity="center_vertical"
+                 android:text="Sub-Element"
+                 android:textColor="#FFFFFF"
+                 android:layout_gravity="center"
+
+                 android:textStyle="bold"></TextView>
+
+             <Spinner
+                 android:id="@+id/rfi_sub_element_id"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center"
+                 android:layout_marginLeft="20dp"
+                 android:layout_marginRight="20dp"
+                 android:layout_weight="2"></Spinner>
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:layout_weight="7"
+             android:orientation="horizontal">
+
+             <TextView
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="20dp"
+                 android:layout_weight="4"
+                 android:gravity="center_vertical"
+                 android:text="CheckList"
+                 android:layout_gravity="center"
+
+                 android:textColor="#FFFFFF"
+                 android:textStyle="bold"></TextView>
+
+             <Spinner
+                 android:id="@+id/rfi_checklist_id"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center"
+                 android:layout_marginLeft="20dp"
+                 android:layout_marginRight="20dp"
+                 android:layout_weight="2"></Spinner>
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:layout_weight="7"
+             android:orientation="horizontal">
+
+             <TextView
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="20dp"
+                 android:layout_weight="4"
+                 android:gravity="center_vertical"
+                 android:text="Group"
+                 android:layout_gravity="center"
+
+                 android:textColor="#FFFFFF"
+                 android:textStyle="bold"></TextView>
+
+             <Spinner
+                 android:id="@+id/rfi_group_id"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center"
+                 android:layout_marginLeft="20dp"
+                 android:layout_marginRight="20dp"
+                 android:layout_weight="2"></Spinner>
+         </LinearLayout>
+
+
+         <!--
+
+             <LinearLayout
+                 android:id="@+id/switch_parent"
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent"
+                 android:layout_weight="7"
+                 android:orientation="horizontal" >
+
+                 <TextView
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="20dp"
+                     android:layout_weight="4"
+                     android:gravity="center_vertical"
+                     android:text="Coverage"
+                     android:textColor="#FFFFFF"
+                     android:textStyle="bold">
+                 </TextView>
+
+
+
+                 <EditText
+                         android:id="@+id/coverage_id"
+                         android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:layout_marginLeft="20dp"
+                         android:layout_marginRight="20dp"
+                         android:layout_weight="2" >
+                     </EditText>
+
+
+             </LinearLayout>
+
+         <LinearLayout
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent"
+                 android:layout_weight="7"
+                 android:orientation="horizontal" >
+
+                 <TextView
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="20dp"
+                     android:layout_weight="4"
+                     android:gravity="center_vertical"
+                     android:text="Drawing No"
+                     android:textColor="#FFFFFF"
+                     android:textStyle="bold">
+                 </TextView>
+
+
+
+                 <EditText
+                         android:id="@+id/drawing_id"
+                         android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:layout_marginLeft="20dp"
+                         android:layout_marginRight="20dp"
+                         android:layout_weight="2" >
+                     </EditText>
+
+
+             </LinearLayout>  -->
+	
+
+     
+     
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="2dp"
+        android:layout_weight="7"
+        android:gravity="bottom" >
+
+        <Button
+            android:id="@+id/question_select_submit"
+            style="@style/CustomButtonStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Ok" >
+        </Button>
+
+        <Button
+            android:id="@+id/question_select_Back"
+            style="@style/CustomButtonStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Back" >
+        </Button>
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

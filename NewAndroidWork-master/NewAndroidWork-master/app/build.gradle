@@ -1,0 +1,1000 @@
+    apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    defaultConfig {
+        applicationId "com.ob.rfi"
+        minSdkVersion 15
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        debug {
+            applicationIdSuffix ".debug"
+        }
+    }
+
+    lintOptions {
+        // Turns off checks for the issue IDs you specify.
+        disable("TypographyFractions")
+        disable("TypographyQuotes")
+        // Turns on checks for the issue IDs you specify. These checks are in
+        // addition to the default lint checks.
+        enable("RtlHardcoded")
+        enable("RtlCompat")
+        enable("RtlEnabled")
+        // To enable checks for only a subset of issue IDs and ignore all others,
+        // list the issue IDs with the 'check' property instead. This property overrides
+        // any issue IDs you enable or disable using the properties above.
+        checkOnly("NewApi", "InlinedApi")
+        // If set to true, turns off analysis progress reporting by lint.
+        quiet = true
+        // if set to true (default), stops the build if errors are found.
+        abortOnError = false
+        // if true, only report errors.
+        ignoreWarnings = true
+    }
+
+
+
+    flavorDimensions "project"
+    productFlavors {
+        ShriramGrandOne {
+            dimension "project"
+            versionNameSuffix ".dev1"
+            resValue "string", "app_name", "ShriramGrandOne"
+            applicationId="om.ob.rfi.shriramgrandone.devtest"
+
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/ShriramGrandOneService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/ShriramGrandOneService/RFIService.asmx"
+            ]
+        }
+        YashwinHinjwadi {
+            dimension "project"
+            versionNameSuffix ".dev"
+            resValue "string", "app_name", "YashwinService"
+            applicationId="om.ob.rfi.yashwinh.devt"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/YashwinService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/YashwinService/RFIService.asmx"
+            ]
+        }
+        YashOneHinjawadi {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/YashOneHinjawadiService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/YashOneHinjawadiService/RFIService.asmx"
+            ]
+        }
+
+        YashOneHinjawadi {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/YashOneHinjawadiService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/YashOneHinjawadiService/RFIService.asmx"
+            ]
+        }
+
+        YashOneInfinitee {
+            dimension "project"
+            versionNameSuffix ".dev"
+            //resValue "string", "app_name", "RFIDemo"
+            //applicationId="om.ob.rfi.YashoneInfinitee.devtest"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/YashoneInfiniteeService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/YashoneInfiniteeService/RFIService.asmx"
+            ]
+        }
+
+        YashOneWakadCentral {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/YashOneWakadCentralService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/YashOneWakadCentralService/RFIService.asmx"
+            ]
+        }
+
+        YashwinEnocre {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/YashwinEncoreService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/YashwinEncoreService/RFIService.asmx"
+            ]
+        }
+
+        YashwinOrizzonte {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/YashwinOrizzonteService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/YashwinOrizzonteService/RFIService.asmx"
+            ]
+        }
+
+        YashwinSukhniwas {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/YashwinSukhniwasService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/YashwinSukhniwasService/RFIService.asmx"
+            ]
+        }
+
+        PalladioP2 {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/PalladioP2Service"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/PalladioP2Service/RFIService.asmx"
+            ]
+        }
+
+        Vantage21 {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/Vantage21Service"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/Vantage21Service/RFIService.asmx"
+            ]
+        }
+
+        Skyland {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/SkylandService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/SkylandService/RFIService.asmx"
+            ]
+        }
+
+        Parkland {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/ParklandService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/ParklandService/RFIService.asmx"
+            ]
+        }
+
+        ParadiseOne {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/ParadiseOneService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/ParadiseOneService/RFIService.asmx"
+            ]
+        }
+
+        MelangeResidencesPhase3 {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/MelangeResidencesPhase3Service"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/MelangeResidencesPhase3Service/RFIService.asmx"
+            ]
+        }
+
+        FusionTowerPhase1 {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/FusionTowerPhase1Service"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/FusionTowerPhase1Service/RFIService.asmx"
+            ]
+        }
+
+        KhambatakiGhatNH04 {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/KhambatakiGhatNH04Service"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/KhambatakiGhatNH04Service/RFIService.asmx"
+            ]
+        }
+
+        CoherenceHouse {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/CoherenceHouseService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/CoherenceHouseService/RFIService.asmx"
+            ]
+        }
+
+        MyHomeAnkura {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/MyHomeAnkuraService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/MyHomeAnkuraService/RFIService.asmx"
+            ]
+        }
+
+        MyHomeBhooja {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/MyHomeBhoojaService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/MyHomeBhoojaService/RFIService.asmx"
+            ]
+        }
+
+        MyHomeTridasa {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/MyHomeTridasaService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/MyHomeTridasaService/RFIService.asmx"
+            ]
+        }
+
+        TridasaMarketingOffice {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/TridasaMarketingOfficeService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/TridasaMarketingOfficeService/RFIService.asmx"
+            ]
+        }
+
+        WAMIL {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/WAMILService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/WAMILService/RFIService.asmx"
+            ]
+        }
+
+        WelspunFlooring {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/WelspunFlooringService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/WelspunFlooringService/RFIService.asmx"
+            ]
+        }
+
+        WFLColony {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/WFLColonyService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/WFLColonyService/RFIService.asmx"
+            ]
+        }
+
+
+        SpaceStation1 {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/SpaceStation1Service"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/SpaceStation1Service/RFIService.asmx"
+            ]
+        }
+
+        ANPGSchool {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/ANPGSchoolService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/ANPGSchoolService/RFIService.asmx"
+            ]
+        }
+
+        MangalamOrganics {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/MangalamOrganicsService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/MangalamOrganicsService/RFIService.asmx"
+            ]
+        }
+        Cyberthum {
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/CyberthumService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/CyberthumService/RFIService.asmx"
+            ]
+        }
+
+        MahagunManorial {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/MahagunManorialService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/MahagunManorialService/RFIService.asmx"
+            ]
+        }
+
+        HYMA {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/HYMAService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/HYMAService/RFIService.asmx"
+            ]
+        }
+
+        HYMLifeHubService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/HYMALifeHubService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/HYMALifeHubService/RFIService.asmx"
+            ]
+        }
+
+        Shounak {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/ShounakService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/ShounakService/RFIService.asmx"
+            ]
+        }
+
+        KotibhaskarBusinessCourt {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/KBCService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/KBCService/RFIService.asmx"
+            ]
+        }
+
+        VenkateshSkydale {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/VenkateshSkydaleService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/VenkateshSkydaleService/RFIService.asmx"
+            ]
+        }
+
+        Sauhrud {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/SauhrudService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/SauhrudService/RFIService.asmx"
+            ]
+        }
+
+        YashwinSupernovauhrud {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/YashwinSupernovaService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/YashwinSupernovaService/RFIService.asmx"
+            ]
+        }
+
+        EminenceService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/EminenceService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/EminenceService/RFIService.asmx"
+            ]
+        }
+
+        Neelaya {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/NeelayaService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/NeelayaService/RFIService.asmx"
+            ]
+        }
+
+        RFIDemo {
+            dimension "project"
+            versionNameSuffix ".dev1"
+            //resValue "string", "app_name", "RFIDemo"
+//            applicationId="om.ob.rfi.RFIDemo.devtest"
+            applicationId = "om.ob.rfi.GodrejCenterYerwada.devtest"
+            ext.serviceNameSpace = [
+
+debug: "https://www.cqra-rfi.com/GodrejCenterYerwadaService"
+            ]
+            ext.URL = [
+debug: "https://www.cqra-rfi.com/GodrejCenterYerwadaService/RFIService.asmx"
+            ]
+//            ext.serviceNameSpace = [
+////                    debug: "http://92.204.136.64:82/RFIDemoService"
+//                    debug: "http://ec2-3-140-73-127.us-east-2.compute.amazonaws.com/ParkAstraService"
+//            ]
+//            ext.URL = [
+////                    debug: "http://92.204.136.64:82/RFIDemoService/RFIService.asmx"
+//                debug: "http://ec2-3-140-73-127.us-east-2.compute.amazonaws.com/ParkAstraService/RFIservice.asmx"
+//            ]
+        }
+
+        LivMo {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/LivMoService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/LivMoService/RFIService.asmx"
+            ]
+        }
+
+
+        PrithviPresidio {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/PrithviPresidioService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/PrithviPresidioService/RFIService.asmx"
+            ]
+        }
+
+        PrithviProximus {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/PrithviProximusService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/PrithviProximusService/RFIService.asmx"
+            ]
+        }
+
+        PrithviProximus {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/PrithviProximusService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/PrithviProximusService/RFIService.asmx"
+            ]
+        }
+
+        MyHomeMeru {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/MyHomeMERUSchoolService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/MyHomeMERUSchoolService/RFIService.asmx"
+            ]
+        }
+
+        MarinaBayService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/MarinaBayService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/MarinaBayService/RFIService.asmx"
+            ]
+        }
+
+        PrideAtlantaService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/PrideAtlanticService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/PrideAtlanticService/RFIService.asmx"
+            ]
+        }
+
+
+        AtlanticService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/AtlanticService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/AtlanticService/RFIService.asmx"
+            ]
+        }
+
+        RamaMetrolifeMaximaService {
+            dimension "project"
+            versionNameSuffix ".dev1"
+            //resValue "string", "app_name", "RFIDemo"
+            //applicationId="om.ob.rfi.RamaMetrolifeMaxima.devtest"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/RamaMetrolifeMaximaService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/RamaMetrolifeMaximaService/RFIService.asmx"
+            ]
+        }
+
+        FourSeasonsService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/FourSeasonsService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/FourSeasonsService/RFIService.asmx"
+            ]
+        }
+
+        EsmeraldaService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/EsmeraldaService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/EsmeraldaService/RFIService.asmx"
+            ]
+        }
+
+        SevenBusinessSquareService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/7BusinessSquareService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/7BusinessSquareService/RFIService.asmx"
+            ]
+        }
+
+        AdarshGreensService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/AdarshGreensService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/AdarshGreensService/RFIService.asmx"
+            ]
+        }
+
+        DwarakaService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/DwarakaService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/DwarakaService/RFIService.asmx"
+            ]
+        }
+
+        YashadaSupremeService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/YashadaSupremeService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/YashadaSupremeService/RFIService.asmx"
+            ]
+        }
+
+        RivaliParkPhase3Service {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/RivaliParkPhase3Service"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/RivaliParkPhase3Service/RFIService.asmx"
+            ]
+        }
+        GauravIconTowerService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/GauravIconTowerService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/GauravIconTowerService/RFIService.asmx"
+            ]
+        }
+        YashadaSupremeFJService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/YashadaSupremeF-JService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/YashadaSupremeF-JService/RFIService.asmx"
+            ]
+        }
+        RAMABarcodeService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/RAMABarcodeService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/RAMABarcodeService/RFIService.asmx"
+            ]
+        }
+        AkankshaService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/AkankshaService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/AkankshaService/RFIService.asmx"
+            ]
+        }
+        KrystalOneService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/KrystalOneService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/KrystalOneService/RFIService.asmx"
+            ]
+        }
+        UniqueYoutopiaService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/UniqueYoutopiaService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/UniqueYoutopiaService/RFIService.asmx"
+            ]
+        }
+
+        AtharvaService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/AtharvaService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/AtharvaService/RFIService.asmx"
+            ]
+        }
+        RamaMetrolifeBizzbayService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/RamaMetrolifeBizzbayService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/RamaMetrolifeBizzbayService/RFIService.asmx"
+            ]
+        }
+        RamaMetrolifeOptimaService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/RamaMetrolifeOptimaService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/RamaMetrolifeOptimaService/RFIService.asmx"
+            ]
+        }
+
+        MyHomeTridasaDemoService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/MyHomeTridasaDemoService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/MyHomeTridasaDemoService/RFIService.asmx"
+            ]
+        }
+
+        ANPAtlantisService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/ANPAtlantisService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/ANPAtlantisService/RFIService.asmx"
+            ]
+        }
+        KaveriSeedsUniversityService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/KaveriSeedsUniversityService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/KaveriSeedsUniversityService/RFIService.asmx"
+            ]
+        }
+        CelestialCityPhase2Service {
+            dimension "project"
+            versionNameSuffix ".dev2"
+           // resValue "string", "app_name", "CelestialCityPhase2"
+            //applicationId="om.ob.rfi.CelestialCityPhase2.devtest"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/CelestialCityPhase2Service"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/CelestialCityPhase2Service/RFIService.asmx"
+            ]
+        }
+        KumarSanctumService {
+            dimension "project"
+            versionNameSuffix ".devv"
+            //applicationId="om.ob.rfi.KumarSanctumm.devtest"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/KumarSanctumService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/KumarSanctumService/RFIService.asmx"
+            ]
+        }
+        KumarPebbleParkService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/KumarPebbleParkService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/KumarPebbleParkService/RFIService.asmx"
+            ]
+        }
+
+        DoyenAscentService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/DoyenAscentService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/DoyenAscentService/RFIService.asmx"
+            ]
+        }
+        KutumbService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/KutumbService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/KutumbService/RFIService.asmx"
+            ]
+        }
+        SRARamtekdiService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/SRARamtekdiService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/SRARamtekdiService/RFIService.asmx"
+            ]
+        }
+        YZPSafetyService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/YZPSafetyService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/YZPSafetyService/RFIService.asmx"
+            ]
+        }
+        MyHomeNishadaService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/MyHomeNishadaService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/MyHomeNishadaService/RFIService.asmx"
+            ]
+        }
+        PranavaGreenwichService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/PranavaGreenwichService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/PranavaGreenwichService/RFIService.asmx"
+            ]
+        }
+        SohoService {
+            dimension "project" 
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/SOHOService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/SOHOService/RFIService.asmx"
+            ]
+        }
+        RaghavaIRISService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/RaghavaIRISService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/RaghavaIRISService/RFIService.asmx"
+            ]
+        }
+        KumarParthTowersService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/KumarParthTowersService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/KumarParthTowersService/RFIService.asmx"
+            ]
+        }
+        AmarPristine4SafetyService {
+            dimension "project"
+            versionNameSuffix ".dev"
+            ext.serviceNameSpace = [
+                    debug: "http://92.204.136.64:82/AmarPristine4SafetyService"
+            ]
+            ext.URL = [
+                    debug: "http://92.204.136.64:82/AmarPristine4SafetyService/RFIService.asmx"
+            ]
+        }
+
+
+    }
+
+    applicationVariants.all { variant ->
+        def flavor = variant.productFlavors[0]
+        variant.buildConfigField "String", "Service_NameSpace", "\"${flavor.serviceNameSpace[variant.buildType.name]}\""
+        variant.buildConfigField "String", "Service_URL", "\"${flavor.URL[variant.buildType.name]}\""
+
+    }
+
+    subprojects {
+        project.configurations.all {
+            resolutionStrategy.eachDependency { details ->
+                if (details.requested.group == 'com.android.support'
+                        && !details.requested.name.contains('multidex')) {
+                    details.useVersion "26.1.0"
+                }
+            }
+        }
+    }
+    namespace 'com.ob.rfi'
+
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation project(':multispinner')
+   // implementation 'com.github.pratikbutani:MultiSelectSpinner:08d324c98'
+    //implementation 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
+    testImplementation 'junit:junit:4.13'
+
+
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+   // implementation files('libs/android-support-v4.jar')
+    implementation files('libs/google-analytics-tracking-2.0.jar')
+    implementation files('libs/httpmime-4.2.jar')
+    implementation files('libs/ksoap2-android-assembly-2.6.0-jar-with-dependencies.jar')
+    implementation files('libs/picasso-2.3.3.jar')
+    implementation 'com.android.support:design:28.0.0'
+
+    implementation "com.android.support:support-compat:28.0.0"
+
+
+    configurations.all {
+        resolutionStrategy {
+            force 'com.android.support:support-v4:28.0.2'
+        }}
+    android {
+        useLibrary 'org.apache.http.legacy'
+    }
+
+
+
+}

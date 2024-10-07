@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 include ':app', ':multispinner'
+=======
+include ':app', ':multispinner'
+>>>>>>> a2c91007528fbb76f98dd54cc4a7f8e52fa159c2
